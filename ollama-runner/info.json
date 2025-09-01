@@ -1,0 +1,41 @@
+{
+    "name": "ollama",
+    "version": "1.0.0",
+    "description": "Ollama - Run Large Language Models locally with API access",
+    "author": "FunctionLand",
+    "license": "MIT",
+    "category": "AI/ML",
+    "tags": ["ai", "llm", "machine-learning", "api"],
+    "homepage": "https://ollama.ai",
+    "repository": "https://github.com/ollama/ollama",
+    "requirements": {
+        "min_memory": "8GB",
+        "min_storage": "10GB",
+        "network": true
+    },
+    "ports": [
+        {
+            "internal": 11434,
+            "external": 11434,
+            "protocol": "tcp",
+            "description": "Ollama API endpoint"
+        }
+    ],
+    "api_endpoints": [
+        {
+            "path": "/api/version",
+            "method": "GET",
+            "description": "Get Ollama version"
+        },
+        {
+            "path": "/api/generate",
+            "method": "POST",
+            "description": "Generate text completion"
+        },
+        {
+            "path": "/api/pull",
+            "method": "POST",
+            "description": "Pull a model"
+        }
+    ]
+}
